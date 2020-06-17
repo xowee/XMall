@@ -25,14 +25,6 @@
     watch: {
       $route () {
         this.$store.commit('setLoading', true)
-        // const toIndex = to.meta.index
-        // const fromIndex = from.meta.index
-        // // console.log(toIndex + '::' + fromIndex)
-        // if (toIndex === 3 || toIndex === 2 && fromIndex === 3 || !fromIndex) {
-        //   this.transitionName = ''
-        // } else {
-        //   this.transitionName = toIndex > fromIndex ? 'slide-left' : 'slide-right'
-        // }
       },
     },
   }
@@ -48,22 +40,4 @@
   .fade-enter-active, .fade-leave-active {
     transition: opacity 300ms ease-in-out;
   }
-  // .slide-right-enter-active,
-  // .slide-right-leave-active,
-  // .slide-left-enter-active,
-  // .slide-left-leave-active {
-  //   transition: opacity 300ms ease-in-out;
-  // }
-  // .slide-right-enter {
-  //   opacity: 0;
-  // }
-  // .slide-right-leave-to {
-  //   opacity: 0;
-  // }
-  // .slide-left-enter {
-  //   opacity: 0;
-  // }
-  // .slide-left-leave-to {
-  //   opacity: 0;
-  // }
 </style>
