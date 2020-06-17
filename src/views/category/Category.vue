@@ -1,10 +1,10 @@
 <template>
   <div id="category">
-    <category-nav-bar></category-nav-bar>
-    <section>
+    <category-nav-bar class="category-nav-bar"></category-nav-bar>
+    <article>
       <category-side-bar :categorys="categorys" @liClick="showSubCategory"></category-side-bar>
       <category-sublist :sub-categorys="subCategorys"></category-sublist>
-    </section>
+    </article>
   </div>
 </template>
 
@@ -52,9 +52,13 @@
 <style lang="scss" scoped>
   #category {
     @include fill-viewport;
-    &>section {
+    position: fixed;
+    top: 0;
+    &>article {
       display: flex;
-      height: calc(100% - 44px);
+      position: fixed;
+      top: $nav-bar-height;
+      bottom: 0;
       .category-detail {
         flex: 1;
         background-color: #fff;

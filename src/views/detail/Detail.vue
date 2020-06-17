@@ -148,14 +148,12 @@
 
 <style lang="scss" scoped>
   #detail {
-    // @include fill-viewport;
-    // position: relative;
+    @include fill-viewport;
     .detail-nav-bar {
       position: fixed;
       top: 0;
     }
     .wrapper {
-      // height: calc(100% - #{$nav-bar-height + $bottom-bar-height});
       position: fixed;
       top: $nav-bar-height;
       bottom: $bottom-bar-height;

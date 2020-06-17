@@ -178,7 +178,6 @@
 <style lang="scss" scoped>
   #home {
     @include fill-viewport;
-    // position: relative;
     .home-nav-bar {
       position: fixed;
       top: 0;
