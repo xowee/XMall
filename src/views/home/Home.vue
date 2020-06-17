@@ -41,7 +41,7 @@
   import HomeRecommendView from './childComponents/HomeRecommendView.vue'
   import HomeFeatureView from './childComponents/HomeFeatureView.vue'
 
-  import TabControl from 'common/tabcontrol/TabControl.vue'
+  import TabControl from 'common/tabControl/TabControl.vue'
   import Scroll from 'common/scroll/Scroll.vue'
 
   import CopyRight from 'content/copyRight/CopyRight.vue'

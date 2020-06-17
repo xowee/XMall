@@ -46,7 +46,7 @@ const mutations = {
       return obj.iid === payload.goodInfo.iid && obj.selectedItem.xdSkuId === payload.goodInfo.xdSkuId
     })
     good.selectedItem = payload.val.selectedItem
-    good.currentCount = payload.val.currentCount
+    good.currentCount = payload.goodInfo.currentCount ? payload.goodInfo.currentCount : payload.val.currentCount
     good.selects = payload.val.selects
   },
   updateState(state, payload) {

@@ -58,6 +58,7 @@
     li {
       padding: 14px 0;
       border-bottom: $border-thin;
+      border-left: 2px solid transparent;
     }
     .actived {
       color: $color-main;

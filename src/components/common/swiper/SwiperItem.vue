@@ -7,30 +7,30 @@
 </template>
 
 <script>
-export default {
-  name: 'SwiperItem',
-  props: {
-    css: {
-      type: Object,
-      default () {
-        return {}
+  export default {
+    name: 'SwiperItem',
+    props: {
+      css: {
+        type: Object,
+        default () {
+          return {}
+        }
+      },
+    },
+    mounted () {
+      if (Object.keys(this.css).length) {
+        this.setStyle()
       }
-    }
-  },
-  methods: {
-    setStyle () {
-      let style = this.$refs.swiperItem.style
-      style.setProperty('--padding', this.css.padding)
-      style.setProperty('--height', this.css.height)
-      style.setProperty('--radius', this.css.radius)
-    }
-  },
-  mounted () {
-    if (Object.keys(this.css).length) {
-      this.setStyle()
-    }
+    },
+    methods: {
+      setStyle () {
+        let style = this.$refs.swiperItem.style
+        style.setProperty('--padding', this.css.padding)
+        style.setProperty('--height', this.css.height)
+        style.setProperty('--radius', this.css.radius)
+      },
+    },
   }
-}
 </script>
 
 <style lang="scss" scoped>

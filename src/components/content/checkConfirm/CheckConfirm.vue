@@ -6,24 +6,25 @@
 </template>
 
 <script>
-import Confirm from 'common/confirm/Confirm.vue'
-export default {
-  name: 'CheckConfirm',
-  components: {
-    Confirm
-  },
-  data() {
-    return {
-      message: ''
-    }
-  },
-  methods: {
-    show (message) {
-      this.message = message
-      return this.$refs.checkConfirm.show()
-    }
+  import Confirm from 'common/confirm/Confirm.vue'
+  
+  export default {
+    name: 'CheckConfirm',
+    components: {
+      Confirm,
+    },
+    data() {
+      return {
+        message: '',
+      }
+    },
+    methods: {
+      show (message) {
+        this.message = message
+        return this.$refs.checkConfirm.show()
+      },
+    },
   }
-}
 </script>
 
 <style lang="scss" scoped>

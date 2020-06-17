@@ -15,69 +15,77 @@
 </template>
 
 <script>
-export default {
-  name: 'sku-detail-header',
-  props: {
-    headerInfo: {
-      type: Object,
-      default () {
-        return {
-          image: '',
-          price: 0,
-          stock: 0,
-          hint: ''
+  export default {
+    name: 'sku-detail-header',
+    props: {
+      headerInfo: {
+        type: Object,
+        default () {
+          return {
+            image: '',
+            price: 0,
+            stock: 0,
+            hint: '',
+          }
         }
-      }
-    }
-  },
-  methods: {
-    hide () {
-      this.$emit('hide')
-    }
+      },
+    },
+    methods: {
+      hide () {
+        this.$emit('hide')
+      },
+    },
   }
-}
 </script>
 
 <style lang="scss" scoped>
   .sku-detail-header {
     display: flex;
+    position: relative;
+
     padding-left:26vw;
     padding-bottom: 20px;
+    
     border-bottom: $border;
-    position: relative;
     .img {
+      flex-shrink: 0;
       position: absolute;
       left: 0;
       bottom: 20px;
+
       width: 26vw;    
+      
       border-radius: 1vw;
+      
       box-shadow: 0 2px 6px rgba(0, 0, 0, .2);
-      flex-shrink: 0;
     }
     img {
-      border-radius: 1vw;
-      height: 100%;
-      width: 100%;
       display: block;
+      width: 100%;
+      height: 100%;
+      border-radius: 1vw;
     }
     .detail-info {
-      height: 100px;
-      text-align: left;
       padding: 32px 0 0 16px;
-      line-height: 18px;
+
+      height: 100px;
+      
       font-size: $size-normal;
+      line-height: 18px;
+      text-align: left;
       .price {
         font-size: $size-large;
         color: $color-main;
       }
     }
     .close {
-      height: 18px;
-      width: 18px;
-      line-height: 18px;
       position: absolute;
       right: 0;
+
+      width: 18px;
+      height: 18px;
+      
+      line-height: 18px;
     }
   }
-  
 </style>

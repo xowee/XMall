@@ -1,5 +1,5 @@
 <template>
-  <div id="tab-bar-item" @click="itemClick">
+  <div class="tab-bar-item" @click="itemClick">
     <div v-show="isActive">
       <slot name="item-img-act"></slot>
     </div>
@@ -13,45 +13,43 @@
 </template>
 
 <script>
-export default {
-  name: "TabBarItem",
-  props: {
-    activeColor: {
-      type: String,
-      default: '#d81e06'
+  export default {
+    name: "TabBarItem",
+    props: {
+      activeColor: {
+        type: String,
+        default: '#d81e06'
+      },
+      path: {
+        type: String
+      },
     },
-    path: {
-      type: String
-    }
-  },
-  computed: {
-    isActive () {
-      return this.$route.path.indexOf(this.path) !== -1
-    }
-  },
-  methods: {
-    showStyle () {
-      return this.isActive ? { color: this.activeColor } : {}
-    },
-    itemClick () {
-      if (this.path !== this.$route.path) {
-        this.$router.replace(this.path)
+    computed: {
+      isActive () {
+        return this.$route.path.indexOf(this.path) !== -1
       }
-    }
+    },
+    methods: {
+      showStyle () {
+        return this.isActive ? { color: this.activeColor } : {}
+      },
+      itemClick () {
+        if (this.path !== this.$route.path) {
+          this.$router.replace(this.path)
+        }
+      },
+    },
   }
-}
 </script>
 
-<style scoped>
-  #tab-bar-item {
+<style lang="scss" scoped>
+  .tab-bar-item {
     flex: 1;
-  }
-
-  #tab-bar-item img{
-    height: 20px;
-    width: 20px;
-    margin-top: 8px;
-    margin-bottom: 4px;
-    /* vertical-align: middle; */
+    img{
+      height: 20px;
+      width: 20px;
+      margin-top: 8px;
+      margin-bottom: 4px;
+    }
   }
 </style>
