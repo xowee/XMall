@@ -1,0 +1,69 @@
+@mixin go-back {
+  position: relative;
+  top: 2px;
+  right: 14px;
+
+  width: 15px;
+  height: 15px;
+}
+
+@mixin button {
+  flex: 1;
+  background-color: $color-main;
+  color: $color-light;
+}
+
+@mixin background {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, .3);
+}
+
+@mixin red-dot {
+  position: absolute;
+  top: 8px;
+  right: 14px;
+  width: 8px;
+  height: 8px;
+  background-color: $color-main;
+  border-radius: 50%;
+}
+
+@mixin nav-title {
+  font-size: $size-large;
+  font-weight: bold;
+  color: $color-black;
+}
+
+@mixin fill-viewport {
+  width: 100vw;
+  // height: 100vh;
+}
+
+@mixin line {
+  height: 1px;
+  width: 100%;
+  background-color: $color-light;
+  &::after {
+    content: '';
+    display: block;
+    height: 1px;
+    width: 100%;
+    margin: 0 auto;
+    background-color: #eee;
+  }
+}
+
+@mixin vertical-align-center {
+  &::before {
+    display: inline-block;
+    margin-top: 1px;
+    vertical-align: middle;
+    width: 0;
+    height: 100%;
+    content: '';
+  }
+}

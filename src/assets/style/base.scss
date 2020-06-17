@@ -1,0 +1,58 @@
+// @import "./normalize.css";
+@import "./variables.scss";
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Helvetica Neue",Helvetica,"PingFang SC","Hiragino Sans GB","Microsoft YaHei","微软雅黑",Arial,sans-serif;
+  user-select: none;
+  -webkit-tap-highlight-color: transparent;
+  background-color: $color-back;
+  color: $color-normal;
+  width: 100vw;
+  height: 100vh;
+}
+
+a {
+  color: $color-normal;
+  text-decoration: none;
+}
+
+.clear-fix::after {
+  clear: both;
+  content: '';
+  display: block;
+  width: 0;
+  height: 0;
+  visibility: hidden;
+}
+
+.clear-fix {
+  zoom: 1;
+}
+
+.arrow-right {
+  border-top: 1px solid #999;
+  border-right: 1px solid #999;
+  width: 9px;
+  height: 9px;
+  background-color: transparent;
+  transform: rotate(45deg);
+  display: inline-block;
+  margin-left: .1rem;
+}
+
+.left {
+  float: left;
+}
+
+.right {
+  float: right;
+}
+
